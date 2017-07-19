@@ -1,6 +1,10 @@
 # Raspbery-Pi3-ModelB-Tools
 Tamplate project with some tools for the Raspberry pi 3 model b alredy setup.
 
+[Raspberry pi3 model b GPIO Diagram](https://github.com/jawetzel/Raspbery-Pi3-ModelB-Tools/blob/master/pi3_gpio.png), 
+the side with 1 faces the body of the pi
+
+
 # Capabilities
 
 ## Play and Record Audio 
