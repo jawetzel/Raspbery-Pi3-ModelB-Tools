@@ -1,5 +1,5 @@
 var Servos = require("./tools/servoMotor");
-
+var Climate = require('./tools/tempAndhumidity');
 
 // Servo Example
 var position = 30;
@@ -20,4 +20,18 @@ var servoLoop = function(){
     }, 500)
 };
 
-servoLoop();
+//servoLoop();
+
+
+// climate Example
+var climateLoop = function () {
+    Climate.ClimateSense(function (climate) {
+        console.log('Tempature: ' + climate.Temperature);
+        console.log('Humidity: ' + climate.Humidity);
+        setTimeout(function () {
+            climateLoop();
+        }, 2000);
+    });
+};
+
+climateLoop();
