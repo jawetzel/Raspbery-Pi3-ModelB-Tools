@@ -1,0 +1,24 @@
+{
+  "name": "raspberry-pi-utility",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sudo node index.js"
+  },
+  "dependencies": {
+    "pca9685": "^4.0.3",
+    "i2c-bus": "^1.2.2",
+
+    "raspicam": "^0.2.13",
+
+    "mic": "^2.1.1",
+    "node-aplay": "^1.0.3",
+
+    "request": "^2.81.0"
+
+  },
+  "author": "",
+  "license": "ISC"
+}
