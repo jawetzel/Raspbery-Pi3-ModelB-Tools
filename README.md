@@ -1,5 +1,5 @@
 # Raspbery-Pi3-ModelB-Tools
-Tools for raspberry pi 3 model b
+Tamplate project with some tools for the Raspberry pi 3 model b alredy setup.
 
 # Capabilities
 
