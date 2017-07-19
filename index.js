@@ -1,5 +1,6 @@
 var Servos = require("./tools/servoMotor");
 var Climate = require('./tools/tempAndhumidity');
+var Image = require('./tools/recordImage');
 
 // Servo Example
 var position = 30;
@@ -34,4 +35,17 @@ var climateLoop = function () {
     });
 };
 
-climateLoop();
+//climateLoop();
+
+var ImageCounter = 0;
+var ImageLoop = function () {
+    Image.CaptureImage('temp/Josh' + ImageCounter + '.jpg', function () {
+        ImageCounter++;
+        console.log('took image ' + ImageCounter);
+        setTimeout(function () {
+            ImageLoop();
+        }, 2000);
+    })
+};
+
+ImageLoop();

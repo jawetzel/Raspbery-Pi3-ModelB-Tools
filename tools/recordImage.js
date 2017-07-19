@@ -11,7 +11,7 @@ var CaptureImage = function(filePath, callback){
         output: filePath,
         timeout: 1
     });
-    camera.on('exit', () => {
+    camera.on('exit', function(){
         callback();
     });
     camera.start();
