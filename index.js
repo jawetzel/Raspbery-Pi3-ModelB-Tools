@@ -25,7 +25,7 @@ var servoLoop = function(){
 
 // climate Example
 var climateLoop = function () {
-    Climate.ClimateSense(function (climate) {
+    Climate.ClimateSenseDht11(function (climate) {
         console.log('Tempature: ' + climate.Temperature);
         console.log('Humidity: ' + climate.Humidity);
         setTimeout(function () {
