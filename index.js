@@ -1,6 +1,7 @@
 var Servos = require("./tools/servoMotor");
 var Climate = require('./tools/tempAndhumidity');
 var Image = require('./tools/recordImage');
+var RecordAudio = require('./tools/recordAudio');
 
 // Servo Example
 var position = 30;
@@ -33,7 +34,7 @@ var climateLoop = function () {
         }, 2000);
     });
 };
-//climateLoop(); //uncomment to run climate loop example
+climateLoop(); //uncomment to run climate loop example
 
 
 // Image Example
@@ -48,3 +49,17 @@ var ImageLoop = function () {
     })
 };
 //ImageLoop(); //uncomment to run the image loop example
+
+// Video Recording Example
+var VideoRecord = function(){
+    Image.VideoRecord('temp/initialRecord', 10, function () {
+        console.log('done');
+    })
+};
+//VideoRecord(); //uncomment to run video recording example
+
+
+// Record Audio example
+var Audio = function () {
+    RecordAudio.RecordAudio('temp/JoshAudioFile.wav');
+};
