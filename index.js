@@ -23,6 +23,25 @@ var servoLoop = function(){
 };
 //servoLoop(); //uncomment this to run the servo loop example
 
+// 360 servo (speed can range from -90 to 90
+var speed = -75;
+var DirectionClockwise = true;
+var servo360Loop = function () {
+    Servos.Activate360Servo(15, speed);
+    if(speed === -90 || speed === 90){
+        DirectionClockwise = !DirectionClockwise;
+    }
+    if(DirectionClockwise){
+        speed += 15;
+    } else {
+        speed -= 15;
+    }
+    setTimeout(function () {
+        servo360Loop();
+    }, 2500);
+};
+//servo360Loop(); // uncomment this to run the 360 degree servo
+
 
 // climate Example
 var climateLoop = function () {
